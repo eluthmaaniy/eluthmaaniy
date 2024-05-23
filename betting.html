@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Betting</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css' rel='stylesheet'/>
+    <link href='https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap' rel='stylesheet'/
+    
+  </head>
+  <body>
+    <div class="p-4 space-y-4">
+  
+  <div class="flex items-center space-x-2">
+    <i><a href="index.html" class="fas fa-arrow-left text-zinc-600"></a></i>
+    <h1 class="text-lg font-semibold">Betting</h1>
+  </div>
+  
+  <div class="bg-white rounded-lg shadow p-4">
+    <div class="flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <i class="fas fa-fire text-red-500"></i>
+        <h2 class="text-lg font-semibold">Hot Offers</h2>
+      </div>
+      <button class="text-green-500">More</button>
+    </div>
+    <div class="mt-4 flex space-x-4">
+      <div class="bg-green-100 p-4 rounded-lg flex flex-col items-center">
+        <span class="text-green-500 text-xl font-bold">₦300</span>
+        <span class="text-zinc-600">Africa365 Voucher</span>
+        <button class="mt-2 bg-green-500 text-white px-4 py-1 rounded">Get</button>
+      </div>
+      <div class="flex-1">
+        <img src="https://res.cloudinary.com/dib5bkbsy/image/upload/v1716488942/IMG_20240523_192601_ozclow.jpg" alt="Voucher Image" class="rounded-lg">
+      </div>
+    </div>
+  </div>
+  
+  <div class="bg-white rounded-lg shadow p-4 flex justify-between items-center">
+    <div class="flex items-center space-x-2">
+      <i class="fas fa-percent text-purple-500"></i>
+      <div>
+        <span class="text-green-500 text-xl font-bold">₦100</span>
+        <span class="text-zinc-600">iLOTBet Voucher</span>
+      </div>
+    </div>
+    <button class="bg-green-500 text-white px-4 py-1 rounded">Get</button>
+  </div>
+  
+  <div class="bg-white rounded-lg shadow p-4">
+    <div class="flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <i class="fas fa-circle text-red-500"></i>
+        <h2 class="text-lg font-semibold">SportyBet</h2>
+      </div>
+      <button id="sportybet-options" class="text-zinc-600"><i class="fas fa-chevron-right"></i></button>
+    </div>
+    <p class="text-zinc-600 mt-2">Enjoy great Discounts EVERY DAY! Save more, Win more!</p>
+    <div class="mt-4">
+      <label for="user-id" class="block text-zinc-600">User ID</label>
+      <input id="user-id" type="text" placeholder="Enter Sportybet Phone number" class="mt-1 w-full p-2 border rounded-lg">
+    </div>
+  </div>
+  
+  <div id="sportybet-dropdown" class="hidden bg-white rounded-lg shadow p-4 mt-2">
+    <ul class="space-y-2">
+      <li class="p-2 hover:bg-zinc-100 rounded">ILot</li>
+      <li class="p-2 hover:bg-zinc-100 rounded">1xBet</li>
+      <li class="p-2 hover:bg-zinc-100 rounded">Bangbet</li>
+      <li class="p-2 hover:bg-zinc-100 rounded">Betano</li>
+      <li class="p-2 hover:bg-zinc-100 rounded">22bet</li>
+    </ul>
+  </div>
+</div>
+
+
+    <div class="p-4 bg-zinc-50 dark:bg-zinc-900">
+  <div class="bg-white dark:bg-zinc-800 p-4 rounded-lg shadow-md">
+    <h2 class="text-lg font-semibold mb-4">Select Amount</h2>
+    <div class="grid grid-cols-3 gap-4 mb-4">
+      <button class="bg-zinc-100 dark:bg-zinc-700 p-4 rounded-lg text-center">
+        <div class="text-xl font-bold">₦100</div>
+        <div class="text-zinc-500">Pay<br>
+         ₦100</div>
+      </button>
+      <button class="bg-zinc-100 dark:bg-zinc-700 p-4 rounded-lg text-center">
+        <div class="text-xl font-bold">₦500</div>
+        <div class="text-zinc-500">Pay <br> ₦500</div>
+      </button>
+      <button class="bg-zinc-100 dark:bg-zinc-700 p-4 rounded-lg text-center">
+        <div class="text-xl font-bold">₦1,000</div>
+        <div class="text-zinc-500">Pay ₦1,000</div>
+      </button>
+      <button class="bg-zinc-100 dark:bg-zinc-700 p-4 rounded-lg text-center">
+        <div class="text-xl font-bold">₦2,000</div>
+        <div class="text-zinc-500">Pay ₦2,000</div>
+      </button>
+      <button class="bg-zinc-100 dark:bg-zinc-700 p-4 rounded-lg text-center">
+        <div class="text-xl font-bold">₦5,000</div>
+        <div class="text-zinc-500">Pay ₦5,000</div>
+      </button>
+      <button class="bg-zinc-100 dark:bg-zinc-700 p-4 rounded-lg text-center">
+        <div class="text-xl font-bold">₦10,000</div>
+        <div class="text-zinc-500">Pay ₦10,000</div>
+      </button>
+    </div>
+    <div class="flex items-center mb-4">
+      <span class="text-xl font-bold">₦</span>
+      <input type="text" class="flex-1 bg-zinc-100 dark:bg-zinc-700 p-2 rounded-lg mx-2" placeholder="100-5,000,000">
+      <button class="bg-green-200 dark:bg-green-700 text-green-800 dark:text-green-200 p-2 rounded-lg">Pay</button>
+    </div>
+  </div>
+  
+<div class="bg-white dark:bg-zinc-800 p-4 rounded-lg shadow-md mt-6 max-w-3xl mx-auto">
+    <div class="flex items-center mb-4">
+        <div class="bg-yellow-500 text-white p-2 rounded-full mr-2">
+            <i class="fas fa-futbol"></i>
+        </div>
+        <h2 class="text-lg font-semibold">Upcoming Matches</h2>
+    </div>
+    <div class="space-y-4">
+        <div class="bg-zinc-100 dark:bg-zinc-700 p-4 rounded-lg flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <img src="https://res.cloudinary.com/dib5bkbsy/image/upload/v1716488395/download_4_ox7qul.png" class="w-10 h-10 rounded-full" alt="Team 1">
+                <div class="text-center">
+                    <div class="font-semibold">VFL Bochum</div>
+                </div>
+            </div>
+            <div class="text-sm text-zinc-500 text-center mx-4 ml-4">
+                23/05 19:30
+            </div>
+            <div class="flex items-center space-x-2">
+                <img src="https://res.cloudinary.com/dib5bkbsy/image/upload/v1716488395/download_4_ox7qul.png" class="w-10 h-10 rounded-full" alt="Team 2">
+                <div class="text-center">
+                    <div class="font-semibold">Fortuna Dusseldorf</div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-zinc-100 dark:bg-zinc-700 p-4 rounded-lg flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <img src="https://res.cloudinary.com/dib5bkbsy/image/upload/v1716488395/download_4_ox7qul.png" class="w-10 h-10 rounded-full" alt="Team 1">
+                <div class="text-center">
+                    <div class="font-semibold">Cagliari Calcio</div>
+                </div>
+            </div>
+            <div class="text-sm text-zinc-500 text-center mx-4">
+                23/05 19:45
+            </div>
+            <div class="flex items-center space-x-2">
+                <img src="https://res.cloudinary.com/dib5bkbsy/image/upload/v1716488395/download_4_ox7qul.png" class="w-10 h-10 rounded-full" alt="Team 2">
+                <div class="text-center">
+                    <div class="font-semibold">ACF Fiorentina</div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-zinc-100 dark:bg-zinc-700 p-4 rounded-lg flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <img src="https://res.cloudinary.com/dib5bkbsy/image/upload/v1716488395/download_4_ox7qul.png" class="w-10 h-10 rounded-full" alt="Team 1">
+                <div class="text-center">
+                    <div class="font-semibold">NEC Nijmegen</div>
+                </div>
+            </div>
+            <div class="text-sm text-zinc-500 text-center mx-4">
+                23/05 17:45
+            </div>
+            <div class="flex items-center space-x-2">
+                <img src="https://res.cloudinary.com/dib5bkbsy/image/upload/v1716488395/download_4_ox7qul.png" class="w-10 h-10 rounded-full" alt="Team 2">
+                <div class="text-center">
+                    <div class="font-semibold">Go Ahead Eagles</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="bg-zinc-100 p-4">
+  <div class="bg-green-500 text-white p-4 rounded-lg flex items-center justify-between">
+    <div>
+      <p>Funding your betting wallet is as simple as ABC 😊</p>
+      <p class="font-bold">Simply Dial *955*5#</p>
+    </div>
+    <img src="" alt="Promo Image" class="rounded-lg">
+  </div>
+  <div class="bg-white mt-4 p-4 rounded-lg shadow">
+    <div class="flex items-center mb-4">
+      <i class="fas fa-coins text-yellow-500 text-2xl"></i>
+      <h2 class="ml-2 text-lg font-semibold">More Events</h2>
+    </div>
+<div class="space-y-4">
+  <div class="flex items-center">
+    <div class="bg-zinc-200 p-4 rounded-lg">
+      <i class="fas fa-mobile-alt text-green-500 text-2xl"></i>
+    </div>
+    <div class="ml-4">
+      <h3 class="font-semibold">Get the best deals</h3>
+      <p class="text-zinc-500">Get up to 6% cashback on Airtime</p>
+    </div>
+  </div>
+  
+  <div class="flex items-center">
+    <div class="bg-zinc-200 p-4 rounded-lg">
+      <i class="fas fa-mobile-alt text-green-500 text-2xl"></i>
+    </div>
+    <div class="ml-4">
+      <h3 class="font-semibold">Biggest Data offers</h3>
+      <p class="text-zinc-500">Grab up to 50% discount & 6% cashback</p>
+    </div>
+  </div>
+  
+  <div class="flex items-center">
+    <img src="https://res.cloudinary.com/dib5bkbsy/image/upload/v1716486750/download_2_cuvxkw.png" alt="iLOTBET Logo" class="rounded-lg w-10 h-10">
+    <div class="ml-4">
+      <h3 class="font-semibold">Secure a free travel package now</h3>
+      <p class="text-zinc-500">Deposit daily on iLOTBet to win an all-expense paid trip during EURO 2024!</p>
+    </div>
+  </div>
+  
+  <div class="flex items-center">
+    <img src="https://res.cloudinary.com/dib5bkbsy/image/upload/v1716486593/download_2_qgumrh.jpg" alt="Africa365 Logo" class="rounded-lg w-10 h-10">
+    <div class="ml-4">
+      <h3 class="font-semibold">Claim bonuses on Africa365</h3>
+      <p class="text-zinc-500">Deposit on Africa365 and claim bonuses</p>
+    </div>
+  </div>
+  
+  <div class="flex items-center">
+    <div class="bg-zinc-200 p-4 rounded-lg">
+      <i class="fas fa-lightbulb text-green-500 text-2xl"></i>
+    </div>
+    <div class="ml-4">
+      <h3 class="font-semibold">Claim bonuses on Africa365</h3>
+      <p class="text-zinc-500">Deposit on Africa365 and claim bonuses</p>
+    </div>
+  </div>
+</div>
+
+<div class="flex justify-center mt-4">
+  <button class="bg-zinc-200 text-zinc-700 py-2 px-4 rounded-lg flex items-center">
+    More <i class="fas fa-chevron-down ml-2"></i>
+  </button>
+</div>
+  </div>
+</div>
+
+
+
+<script>
+  document.getElementById('sportybet-options').addEventListener('click', function() {
+    const dropdown = document.getElementById('sportybet-dropdown');
+    dropdown.classList.toggle('hidden');
+  });
+</script>
+
+ <style>
+    body {
+        font-family: lato;
+        font-size: 14px;
+    }
+</style>
+  </body>
+</html>

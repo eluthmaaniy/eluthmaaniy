@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opay App Interface</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+<link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css' rel='stylesheet'/>
+<link href='https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap' rel='stylesheet'/
+</head>
+<body class="bg-gray-100">
+    <header class="p-2 bg-white flex items-center justify-between">
+        <div class="flex items-center">
+            <a href="profile.html">
+            <img src="https://res.cloudinary.com/dnvwfo2g1/image/upload/v1714935416/1711235014696_xvu4lm.png" alt="Profile Picture" class="w-10 h-10 rounded-full">
+            </a>
+            <span class="ml-2 font-weight-normal text-gray-800">Hi, El Uthmaaniy</span>
+        </div>
+        <div class="flex space-x-4">
+            <button><a href="support.html"><i class="fas fa-headset text-black-800 hover:text-gray-700 w-6 h-6 text-2xl"></i></a></button>
+            <button onclick="startQRScanner()">
+    <i class="fas fa-qrcode text-black-100 hover:text-black-800 w-6 h-6 text-2xl"></i>
+</button>
+            <button><a href="notifications.html"><i class="far fa-bell text-black-100 hover:text-gray-800 w-6 h-6 text-2xl"></i></a></button>
+        </div>
+    </header>
+    
+   <section class="bg-orange-100 rounded-b-xl text-orange-700 p-1 text-center flex items-center justify-center mt-2" style="background-color: #ffedcc; color: #ff9800;">
+        <i class="fas fa-volume-up mr-1"></i>
+        <div class="scrolling-text whitespace-nowrap overflow-x-auto">
+            <p class="inline-block">Opay prohibits any cryptocurrency and all virtual currency trading. Any account in violation of this notice will be closed</p>
+        </div>
+    </section>
+    
+
+
+
+    <main class="p-4 overflow-y-auto">
+        <div class="bg-green-500 text-white p-4 rounded-lg flex justify-between items-center">
+            <div>
+                <div class="flex items-center">
+                    <span><a href="balance.html" class="mr-2 text-sm">Available Balance</a></span>
+                    <i id="toggle-eye" class="fas fa-eye text-sm ml-1 cursor-pointer"></i>
+                </div>
+                <p id="balance" class="text-2xl mt-2">₦58470.20</p>
+            </div>
+            <button><a href="add-money.html" class="bg-white text-green-500 px-4 py-2 rounded-full">+ Add Money</a></button>
+        </div>
+        
+        <div class="rounded-lg bg-white p-3 mt-2 flex justify-between items-center">
+            <button><a href="to-opay.html" class="bg-white p-1 rounded-lg shadow-2xl flex flex-col items-center" style="background-color: #D2F5EC;">
+                <i class="fa-solid fa-user-tag text-green-600 hover:text-gray-800 w-5 h-7 text-2xl"></i>
+             <span class="mt-0 text-gray-600">To OPay</span></a> 
+            </button>
+      
+             
+            <button><a href="to-bank.html" class="bg-white p-1 rounded-lg shadow flex flex-col items-center" style="background-color: #D2F5EC;">
+                <i class="fas fa-university text-green-600 hover:text-gray-800 w-5 h-7 text-2xl"></i>
+                <span class="mt-0 text-gray-600">To Bank</span></a>
+            </button>
+            <button><a href="withdraw.html" class="bg-white p-1 rounded-lg shadow flex flex-col items-center" style="background-color: #D2F5EC;">               <i class="fa fa-exchange text-green-600 hover:text-gray-800 w-5 h-7 text-2xl"></i>
+                <span class="mt-0 text-gray-600">Withdraw</span></a>
+            </button>
+        </div>
+ 
+ <div id="loading" class="hidden fixed top-0 left-0 right-0 bottom-0 flex justify-center items-center bg-white-900 bg-opacity-50 z-50">
+        <div class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    
+
+       
+        <div class="rounded-lg shadow-3xl bg-white p-3 mt-4 flex justify-between items-center">
+
+            <div><a href="airtime.html" class="flex flex-col items-center">
+                <i class="fas fa-signal text-green-500 text-2xl"></i>
+                <span class="text-gray-600 mt-2">Airtime</span></a>
+            </div>
+            <div><a href="data.html" class="flex flex-col items-center">
+                <i class="fa-solid fa-tower-broadcast text-green-500 text-2xl"></i>
+                <span class="text-gray-600 mt-2">Data</span></a>
+            </div>
+            <div><a href="betting.html" class="flex flex-col items-center">
+                <i class="fas fa-futbol text-green-500 text-2xl"></i>
+                <span class="text-gray-600 mt-2">Betting</span></a>
+            </div>
+            <div><a href="tv.html" class="flex flex-col items-center">
+                <i class="fas fa-tv text-green-500 text-2xl"></i>
+                <span class="text-gray-600 mt-2">TV</span></a>
+            </div>
+
+            </div>
+        </div>
+        
+        <div class="rounded-lg shadow-3x1 bg-white p-3 mt flex justify-between items-center">
+            <div><a href="owealth.html" class="flex flex-col items-center">
+                <i class="fas fa-piggy-bank text-green-500 text-2xl"></i>
+                <span class="text-gray-600 mt-2">OWealth</span></a>
+            </div>
+            <div><a href="loan.html"class="flex flex-col items-center">
+                <i class="fas fa-sack-dollar text-green-500 text-2xl"></i>
+                <span class="text-gray-600 mt-2">Loan</span></a>
+            </div>
+            <div><a href="play4achild.html" class="flex flex-col items-center">
+                <i class="fas fa-hand-holding-heart text-green-500 text-2xl"></i>
+                <span class="text-gray-600 mt-2">Play4aChild</span></a>
+            </div>
+            <div><a href="more.html" class="flex flex-col items-center">
+                <i class="fas fa-ellipsis-h text-green-500 text-2xl"></i>
+                <span class="text-gray-600 mt-2">More</span></a>
+            </div>
+        </div>
+        
+            <div><a href="cash-up-for-grab.html" class="bg-white p-4 rounded-lg shadow-2x1 mt-4 flex items-center">
+            <i class="fas fa-bullhorn text-green-500 text-2xl mr-4"></i>
+            <div>
+                <p class="font-weight-normal
+                text-lg">Cash up for grabs!</p>
+                <p class="text-gray-600">Invite friends and earn up to ₦4,200 Cash</p>
+            </div>
+            </a>
+        </div>
+    </main>
+
+    <footer class="bg-white p-2 fixed bottom-0 left-0 right-0 flex justify-around shadow">
+        <button><a href="#"class="flex flex-col items-center">
+            <i class="fas fa-circle-notch text-2xl text-gray-400 hover:text-green-500 w-6 h-6"></i>
+            <span class="text-xs mt-1 text-gray-500">Home</span></a>
+        </button>
+        <button><a href="rewards.html" class="flex flex-col items-center">
+            <i class="fa-solid fa-gem text-2xl text-gray-400 hover:text-green-500 w-6 h-6"></i>
+            <span class="text-xs mt-1 text-gray-500">Rewards</span></a>
+        </button>
+        <button><a href="finance.html" class="flex flex-col items-center">
+            <i class="fas fa-chart-line text-2xl text-gray-400 hover:text-green-500 w-6 h-6"></i>
+            <span class="text-xs mt-1 text-gray-500">Finance</span></a>
+        </button>
+        <button><a href="cards.html" class="flex flex-col items-center">
+            <i class="fa-regular fa-credit-card text-2xl text-gray-400 hover:text-green-500 w-6 h-6"></i>
+            <span class="text-xs mt-1 text-gray-500">Cards</span></a>
+        </button>
+ <button><a href="me.html" class="flex flex-col items-center">
+            <i class="fa-solid fa-user-gear text-2xl text-gray-400 hover:text-green-500 w-6 h-6"></i>
+            <span class="text-xs mt-1 text-gray-500">Me</span></a>
+        </button>
+    
+        
+    </footer>
+
+    <style>
+        .scrolling-text {
+            width: 100%;
+            overflow: hidden;
+        }
+        .scrolling-text p {
+            animation: scroll-left 10s linear infinite;
+        }
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+    <style>
+    body {
+        padding-bottom: 80px;
+        font-family: lato;
+        font-size: 14px;
+    }
+</style>
+<style>
+  .lds-ring,
+    .lds-ring div {
+        box-sizing: border-box;
+    }
+
+    .lds-ring {
+        display: inline-block;
+        position: relative;
+        width: 80px;
+        height: 80px;
+    }
+
+    .lds-ring div {
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        width: 64px;
+        height: 64px;
+        margin: 8px;
+        border: 8px solid currentColor;
+        border-radius: 50%;
+        animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+        border-color: #1FC69D transparent transparent transparent;
+    }
+
+    .lds-ring div:nth-child(1) {
+        animation-delay: -0.45s;
+    }
+
+    .lds-ring div:nth-child(2) {
+        animation-delay: -0.3s;
+    }
+
+    .lds-ring div:nth-child(3) {
+        animation-delay: -0.15s;
+    }
+
+    @keyframes lds-ring {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+<script>
+  // Function to show loading animation
+function showLoading() {
+    document.getElementById('loading').classList.remove('hidden');
+}
+
+// Function to hide loading animation
+function hideLoading() {
+    document.getElementById('loading').classList.add('hidden');
+}
+
+// Add event listeners to all links
+document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', event => {
+        // Get the href attribute of the clicked link
+        const href = link.getAttribute('href');
+
+        // Exclude specific pages
+        const excludeLinks = ['index.html', 'rewards.html', 'finance.html', 'cards.html', 'me.html'];
+        if (href && !excludeLinks.includes(href) && !href.startsWith('#') && !href.startsWith('javascript:')) {
+            // Prevent default link behavior
+            event.preventDefault();
+
+            // Show loading animation
+            showLoading();
+
+            // Simulate delay (optional)
+            setTimeout(() => {
+                // Navigate to the destination page
+                window.location.href = href;
+
+                // Hide loading animation after navigation (if needed)
+                // hideLoading(); // This line is not needed as the new page load will hide the loader
+            }, 1000); // Change delay as needed
+        }
+    });
+});
+
+
+function startQRScanner() {
+    navigator.mediaDevices.getUserMedia({ video: true })
+        .then((stream) => {
+            // Permission granted and camera opened
+            stream.getTracks().forEach(track => track.stop()); // Stop the stream immediately
+            alert('Camera permission granted.');
+        })
+        .catch((err) => {
+            // Permission denied or error
+            console.error('Camera permission denied or error:', err);
+            alert('Camera permission denied or an error occurred.');
+        });
+}
+document.addEventListener('DOMContentLoaded', (event) => {
+            const eyeIcon = document.getElementById('toggle-eye');
+            const balance = document.getElementById('balance');
+
+            eyeIcon.addEventListener('click', () => {
+                if (balance.style.display === 'none') {
+                    balance.style.display = 'block';
+                    eyeIcon.classList.remove('fa-eye-slash');
+                    eyeIcon.classList.add('fa-eye');
+                } else {
+                    balance.style.display = 'none';
+                    eyeIcon.classList.remove('fa-eye');
+                    eyeIcon.classList.add('fa-eye-slash');
+                }
+            });
+        }); 
+           
+</script>
+</body>
+</html>
+
+            

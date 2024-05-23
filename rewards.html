@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rewards Interface</title>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css' rel='stylesheet'/>
+      <link href='https://fonts.googleapis.com/css2?family=Lato' rel='stylesheet'/>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+<!-- Header -->
+<div class="p-3 bg-green-50 flex justify-between items-center">
+    <h1 class="text-2xl font-bold">Rewards</h1>
+    <i class="fas fa-ellipsis-h text-2xl"></i>
+</div>
+
+<!-- Balance and Vouchers Section -->
+<div class="p-2 bg-green-50 flex justify-around items-center">
+    <div class="flex items-center">
+        <span class="text-yellow-500 text-lg"><i class="fas fa-coins"></i></span>
+        <div class="ml-2">
+            <div class="text-xs text-gray-500">Cashback</div>
+            <div class="text-lg text-green-500 font-semibold">₦ 0.00</div>
+        </div>
+    </div>
+    <div class="flex items-center">
+        <span class="text-lg"></span>
+        <div class="ml-2">
+            <div class="text-xs text-gray-500">Voucher</div>
+            <div class="text-lg font-semibold">1 <i class="fas fa-chevron-right text-sm"></i></div>
+        </div>
+    </div>
+</div>
+
+<!-- Daily Bonus Section -->
+<div class="p-4">
+    <div class="bg-white p-4 rounded-lg shadow-md flex justify-between items-center">
+        <div class="flex items-center">
+            <div class="bg-green-100 p-2 rounded-full">
+                <i class="fas fa-calendar-alt text-green-500 text-xl"></i>
+            </div>
+            <div class="ml-4">
+                <div class="font-semibold">Daily bonus</div>
+                <div class="text-sm text-gray-500">Get up to ₦100 bonus</div>
+            </div>
+        </div>
+        <button class="bg-green-500 text-white px-4 py-2 rounded-full">Get Now</button>
+    </div>
+</div>
+
+<!-- Daily Bonus List -->
+<div class="p-4">
+    <h2 class="text-lg font-semibold mb-4">Daily Bonus</h2>
+    <div class="space-y-4">
+        <!-- Glo Airtime -->
+        <div class="bg-white p-4 rounded-lg shadow-md flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="bg-gray-100 p-2 rounded-full">
+                    <i class="fas fa-mobile-alt text-xl text-green-500"></i>
+                </div>
+                <div class="ml-4">
+                    <div class="font-semibold">Glo Airtime <span class="text-yellow-500">₦+2%</span></div>
+                    <div class="text-sm text-gray-500">Buy Airtime and get up to 6% Cashback</div>
+                </div>
+            </div>
+            <button class="bg-green-500 text-white px-4 py-2 rounded-full">Go</button>
+        </div>
+        <!-- 9 Mobile Airtime -->
+        <div class="bg-white p-4 rounded-lg shadow-md flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="bg-gray-100 p-2 rounded-full">
+                    <i class="fas fa-mobile-alt text-xl text-green-500"></i>
+                </div>
+                <div class="ml-4">
+                    <div class="font-semibold">9 Mobile Airtime <span class="text-yellow-500">₦+2%</span></div>
+                    <div class="text-sm text-gray-500">Buy Airtime and get up to 5% Cashback</div>
+                </div>
+            </div>
+            <button class="bg-green-500 text-white px-4 py-2 rounded-full">Go</button>
+        </div>
+        <!-- MTN/Airtel Airtime -->
+        <div class="bg-white p-4 rounded-lg shadow-md flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="bg-gray-100 p-2 rounded-full">
+                    <i class="fas fa-mobile-alt text-xl text-green-500"></i>
+                </div>
+                <div class="ml-4">
+                    <div class="font-semibold">MTN/Airtel Airtime <span class="text-yellow-500">₦+2%</span></div>
+                    <div class="text-sm text-gray-500">Buy Airtime and get up to 3% Cashback</div>
+                </div>
+            </div>
+            <button class="bg-green-500 text-white px-4 py-2 rounded-full">Go</button>
+        </div>
+    </div>
+    <div class="mt-4 text-center text-green-500">
+        <a href="#">View Details <i class="fas fa-chevron-down"></i></a>
+    </div>
+</div>
+
+<!-- Footer -->
+    <footer class="bg-white p-2 fixed bottom-0 left-0 right-0 flex justify-around shadow">
+        <button><a href="index.html"class="flex flex-col items-center">
+            <i class="fas fa-circle-notch text-2xl text-gray-400 hover:text-green-500 w-6 h-6"></i>
+            <span class="text-xs mt-1 text-gray-500">Home</span></a>
+        </button>
+        <button><a href="rewards.html" class="flex flex-col items-center">
+            <i class="fa-solid fa-gem text-2xl text-gray-400 hover:text-green-500 w-6 h-6"></i>
+            <span class="text-xs mt-1 text-gray-500">Rewards</span></a>
+        </button>
+        <button><a href="finance.html" class="flex flex-col items-center">
+            <i class="fas fa-chart-line text-2xl text-gray-400 hover:text-green-500 w-6 h-6"></i>
+            <span class="text-xs mt-1 text-gray-500">Finance</span></a>
+        </button>
+        <button><a href="cards.html" class="flex flex-col items-center">
+            <i class="fa-regular fa-credit-card text-2xl text-gray-400 hover:text-green-500 w-6 h-6"></i>
+            <span class="text-xs mt-1 text-gray-500">Cards</span></a>
+        </button>
+ <button><a href="me.html" class="flex flex-col items-center">
+            <i class="fa-solid fa-user-gear text-2xl text-gray-400 hover:text-green-500 w-6 h-6"></i>
+            <span class="text-xs mt-1 text-gray-500">Me</span></a>
+        </button>
+     </footer>
+     <style>
+     body {
+        padding-bottom: 80px;
+        font-family: lato;
+        font-size: 14px;
+    }
+    </style>
+</body>
+</html>

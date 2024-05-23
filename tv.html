@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TV Subscription</title>
+  <link rel="stylesheet" href="styles.css">
+<link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css' rel='stylesheet'/>
+
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap' rel='stylesheet'/
+  
+    
+  
+</head>
+<body class="bg-gray-100">
+  <div class="max-w-md mx-auto bg-white rounded-lg shadow-md p-6 mt-10">
+    <div class="flex items-center mb-4">
+      <i><a href="index.html" class="fas fa-arrow-left text-gray-600 mr-2"></a></i>
+      <h1 class="text-lg font-semibold">TV</h1>
+    </div>
+    <div>
+      <label for="provider" class="block text-gray-700 font-semibold mb-2">Select Provider</label>
+      <div class="relative">
+        <div id="provider-selector" class="flex items-center border border-gray-300 rounded-lg p-2 mb-2 cursor-pointer">
+          <img src="https://res.cloudinary.com/dib5bkbsy/image/upload/v1716487483/download_3_l1yile.png" alt="Startimes" class="w-8 h-8 rounded-full mr-2">
+          <p class="text-gray-800 font-semibold">Startimes</p>
+          <i class="fas fa-chevron-down ml-auto text-gray-600"></i>
+        </div>
+        <div id="provider-list" class="absolute w-full bg-white border border-gray-300 rounded-lg mt-1 hidden">
+          <div class="p-2 flex items-center cursor-pointer hover:bg-gray-100">
+            <img src="https://res.cloudinary.com/dib5bkbsy/image/upload/v1716487483/download_3_l1yile.png" alt="Startimes" class="w-8 h-8 rounded-full mr-2">
+            <p class="text-gray-800">Startimes</p>
+          </div>
+          <div class="p-2 flex items-center cursor-pointer hover:bg-gray-100">
+            <img src="https://res.cloudinary.com/dib5bkbsy/image/upload/v1716487214/download_4_dezecw.jpg" alt="DSTV" class="w-8 h-8 rounded-full mr-2">
+            <p class="text-gray-800">DSTV</p>
+          </div>
+          <div class="p-2 flex items-center cursor-pointer hover:bg-gray-100">
+            <img src="https://res.cloudinary.com/dib5bkbsy/image/upload/v1716487215/images_2_lxuqtu.jpg" alt="GOTV" class="w-8 h-8 rounded-full mr-2">
+            <p class="text-gray-800">GOTV</p>
+          </div>
+          <div class="p-2 flex items-center cursor-pointer hover:bg-gray-100">
+            <img src="https://res.cloudinary.com/dib5bkbsy/image/upload/v1716487426/images_3_bgs0ei.jpg" alt="Other" class="w-8 h-8 rounded-full mr-2">
+            <p class="text-gray-800">Others</p>
+          </div>
+        </div>
+      </div>
+      <div class="text-sm text-green-600 mb-4">Subscribe Classic, Special, Super-T or Super Bouquet & Get Upto ₦7,200 StarTimes ON subscription free</div>
+    </div>
+    <div>
+      <label for="smartcard" class="block text-gray-700 font-semibold mb-2">Smartcard Number</label>
+      <input type="text" id="smartcard" class="w-full border border-gray-300 rounded-lg p-2 mb-4" placeholder="">
+    </div>
+    <div>
+      <label for="payment-period" class="block text-gray-700 font-semibold mb-2">Payment Period</label>
+      <div class="flex mb-4">
+        <button class="w-1/2 border border-gray-300 rounded-l-lg p-2 text-center bg-green-100 text-green-600">7 Days</button>
+        <button class="w-1/2 border border-gray-300 rounded-r-lg p-2 text-center">30 Days</button>
+      </div>
+    </div>
+    <div>
+      <label for="package" class="block text-gray-700 font-semibold mb-2">Package</label>
+      <select id="package" class="w-full border border-gray-300 rounded-lg p-2 mb-4">
+        <option>Please select your package</option>
+      </select>
+    </div>
+    <button class="w-full bg-green-500 text-white font-semibold py-2 rounded-lg">Confirm</button>
+  </div>
+ <script>
+   document.getElementById('provider-selector').addEventListener('click', function() {
+      var providerList = document.getElementById('provider-list');
+      if (providerList.classList.contains('hidden')) {
+        providerList.classList.remove('hidden');
+      } else {
+        providerList.classList.add('hidden');
+      }
+    });
+
+    var providerItems = document.querySelectorAll('#provider-list div');
+    providerItems.forEach(function(item) {
+      item.addEventListener('click', function() {
+        var providerSelector = document.getElementById('provider-selector');
+        providerSelector.innerHTML = this.innerHTML + '<i class="fas fa-chevron-down ml-auto text-gray-600"></i>';
+        document.getElementById('provider-list').classList.add('hidden');
+      });
+    });
+ </script>
+   <style>
+    body {
+        font-family: lato;
+        font-size: 14px;
+    }
+</style>
+<style>
+    .hidden {
+      display: none;
+    }
+   </style>
+</body>
+</html>
